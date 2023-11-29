@@ -1,0 +1,70 @@
+
+<html>
+  <head>
+    <title>Event Sharer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="javascripts/api_version.js"></script>
+    <script src="javascripts/utils.js"></script>
+    <script src="javascripts/identity.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/tool.js"></script>
+  </head>
+
+  <body onload="init()">
+    <nav class="navbar navbar-light bg-light">
+      <div
+        id="errorInfo"
+        class="alert alert-danger fade show"
+        role="alert"
+        style="opacity: 0"
+      ></div>
+      <div id="identity_div">loading...</div>
+    </nav>
+    <h1>Event Sharer</h1>
+    <button onclick="loadPosts()">refresh</button>
+    <div id="posts_box">
+
+      </div>
+      <!-- Repeat the above for each post -->
+    
+
+    
+
+    <div id="make_post_div" class="d-none">
+      <h2>Post New Event:</h2>
+
+      <!-- Event Title -->
+      <p>Enter the event title:</p>
+      <input type="text" id="titleInput" />
+
+      <!-- Event city -->
+      <p>Enter the event city:</p>
+      <input type="text" id="locationInput" />
+
+      <!-- Event postal code -->
+      <p>Enter the event postal:</p>
+      <input type="text" id="postalInput" />
+
+      <!-- Reason for Sharing (repurposing existing field) -->
+      <p>Enter your reason for sharing this event:</p>
+      <input type="text" id="descriptionInput" />
+
+      <!-- Add an input field for image upload -->
+      <p>Upload an image for the event:</p>
+      <input type="file" id="imageUpload" name="eventImage" accept="image/*" />
+
+      <!-- Post Button -->
+      <button onclick="postEvent()">Post</button> <span id="postStatus"></span>
+    </div>
+    
+    <button id="toggleButton" class="toggle-btn">&#9664;</button>
+
+  </body>
+</html>
